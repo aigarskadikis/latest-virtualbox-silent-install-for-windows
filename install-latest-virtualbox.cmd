@@ -11,7 +11,7 @@ wget -qO- --no-check-certificate ^
 https://www.virtualbox.org/wiki/Downloads ^|
 sed "s/\d034/\n/g" ^|
 sed -n "/.exe/p"') do (
-wget %%a
+wget %%a --directory-prefix "%~dp0\"
 )
 )
 echo chech if file has good consistence
